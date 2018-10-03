@@ -20,8 +20,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/products', product);
 
-let port = 8080;
+let port = process.env.PORT || 3000
 
-app.listen(port, () => {
+app.listen({}, () => {
     console.log('Server is up and running on port numner ' + port);
 });
